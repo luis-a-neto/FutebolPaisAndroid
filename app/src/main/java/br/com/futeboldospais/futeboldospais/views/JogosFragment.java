@@ -3,10 +3,12 @@ package br.com.futeboldospais.futeboldospais.views;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import br.com.futeboldospais.futeboldospais.R;
@@ -21,6 +23,10 @@ public class JogosFragment extends Fragment{
     private Button btnProximaRodada;
     private Button btnRodadaAnterior;
     private TextView txtRodada;
+
+    private RadioButton rbtMaster;
+    private RadioButton rbtSenior;
+    private RadioButton rbtTodos;
 
     //Rodada atual chumbada
     private String rodada = "2º Turno - 2º Rodada";
@@ -49,6 +55,13 @@ public class JogosFragment extends Fragment{
                              Bundle savedInstanceState) {
 
         final View view = inflater.inflate(R.layout.fragment_jogos, container, false);
+
+        rbtMaster = (RadioButton) view.findViewById(R.id.rbt_master);
+        rbtSenior = (RadioButton) view.findViewById(R.id.rbt_senior);
+        rbtTodos = (RadioButton) view.findViewById(R.id.rbt_todos);
+
+        rbtTodos.setTextColor(ContextCompat.getColor(getContext(), R.color.white));
+        rbtTodos.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.gray));
 
         //Inicia uma transação com o fragmento selecionado ao criar a view
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
@@ -91,6 +104,48 @@ public class JogosFragment extends Fragment{
                 FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
                 transaction.replace(R.id.frame_jogos, fragmentoSelecionado);
                 transaction.commit();
+            }
+        });
+
+        rbtMaster.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rbtMaster.setTextColor(ContextCompat.getColor(getContext(), R.color.white));
+                rbtMaster.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.arredondar_borda_esq_cinza));
+
+                rbtSenior.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
+                rbtSenior.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.arredondar_borda_dir_branco));
+
+                rbtTodos.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
+                rbtTodos.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.white));
+            }
+        });
+
+        rbtSenior.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rbtMaster.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
+                rbtMaster.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.arredondar_borda_esq_branco));
+
+                rbtSenior.setTextColor(ContextCompat.getColor(getContext(), R.color.white));
+                rbtSenior.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.arredondar_borda_dir_cinza));
+
+                rbtTodos.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
+                rbtTodos.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.white));
+            }
+        });
+
+        rbtTodos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rbtMaster.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
+                rbtMaster.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.arredondar_borda_esq_branco));
+
+                rbtSenior.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
+                rbtSenior.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.arredondar_borda_dir_branco));
+
+                rbtTodos.setTextColor(ContextCompat.getColor(getContext(), R.color.white));
+                rbtTodos.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.gray));
             }
         });
 
