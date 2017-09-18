@@ -5,11 +5,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import br.com.futeboldospais.futeboldospais.R;
 import br.com.futeboldospais.futeboldospais.util.NavegacaoRodadas;
@@ -18,7 +20,7 @@ import br.com.futeboldospais.futeboldospais.util.NavegacaoRodadas;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class JogosFragment extends Fragment{
+public class JogosFragment extends Fragment {
 
     private Button btnProximaRodada;
     private Button btnRodadaAnterior;
@@ -56,6 +58,47 @@ public class JogosFragment extends Fragment{
 
         final View view = inflater.inflate(R.layout.fragment_jogos, container, false);
 
+        view.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
+
+                float oldX = 0;
+                float oldY = 0;
+
+                float x1 = 0, x2, y1 = 0, y2, dx, dy;
+                String direction = null;
+                switch(event.getAction()) {
+                    case(MotionEvent.ACTION_DOWN):
+                        x1 = event.getX();
+                        y1 = event.getY();
+                        break;
+
+                    case(MotionEvent.ACTION_MOVE): {
+                        x2 = event.getX();
+                        y2 = event.getY();
+                        dx = x2-x1;
+                        dy = y2-y1;
+
+                        // Use dx and dy to determine the direction
+                        if(Math.abs(dx) > Math.abs(dy)) {
+                            if(dx>0)
+                                direction = "right";
+                            else
+                                direction = "left";
+                        } else {
+                            if(dy>0)
+                                direction = "down";
+                            else
+                                direction = "up";
+                        }
+                    }
+                    break;
+                }
+
+                txtRodada.setText(direction);
+                return true;
+            }
+        });
+
         rbtMaster = (RadioButton) view.findViewById(R.id.rbt_master);
         rbtSenior = (RadioButton) view.findViewById(R.id.rbt_senior);
         rbtTodos = (RadioButton) view.findViewById(R.id.rbt_todos);
@@ -64,20 +107,18 @@ public class JogosFragment extends Fragment{
         rbtTodos.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.gray));
 
         //Inicia uma transação com o fragmento selecionado ao criar a view
-        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_jogos, fragmentoSelecionado);
-        transaction.commit();
+        // FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        //transaction.replace(R.id.frame_jogos, fragmentoSelecionado);
+        // transaction.commit();
 
         txtRodada = (TextView) view.findViewById(R.id.txt_rodada);
         txtRodada.setText(rodada);
 
         //Botão para voltar uma rodada
         btnRodadaAnterior = (Button) view.findViewById(R.id.btn_anterior);
-        btnRodadaAnterior.setOnClickListener(new View.OnClickListener()
-        {
+        btnRodadaAnterior.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 //Chama a classe NavegaçãoRodadas para receber um titulo de rodada e uma instancia da rodada anterior
                 rodada = NavegacaoRodadas.selecionaRodada(NavegacaoRodadas.ANTERIOR, fragmentoSelecionado).getRodada();
                 fragmentoSelecionado = NavegacaoRodadas.selecionaRodada(NavegacaoRodadas.ANTERIOR, fragmentoSelecionado).getFragmentoSelecionado();
@@ -91,11 +132,9 @@ public class JogosFragment extends Fragment{
 
         //Botão para avançar uma rodada
         btnProximaRodada = (Button) view.findViewById(R.id.btn_proximo);
-        btnProximaRodada.setOnClickListener(new View.OnClickListener()
-        {
+        btnProximaRodada.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 //Chama a classe NavegaçãoRodadas para receber um titulo de rodada e uma instancia da proxima rodada
                 rodada = NavegacaoRodadas.selecionaRodada(NavegacaoRodadas.PROXIMO, fragmentoSelecionado).getRodada();
                 fragmentoSelecionado = NavegacaoRodadas.selecionaRodada(NavegacaoRodadas.PROXIMO, fragmentoSelecionado).getFragmentoSelecionado();
