@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_954b5b46dd8e90508dbfd9cbd2a14b64e6b0a5d6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\876cceab80d18454d2339a1545919df3a1ac0a7f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8909f17d4ebc97dcb4eb968570289e7def8d77c0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\e686b0177b1466a44a7985b74d2b8eba50b1b76d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e792f93d57f1f6df288d89381203bda608955b17\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a49bac0471425b1104fd443cba45389a24a4fafe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b86809516b0a9e254a16a3f5f63e7454d1aa8edb">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_5b761e272ad690a5784c610f1f0d4c6ac9762d62\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\344a66f076ef1be4fde7fc4b4c4dae77e2a41824\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_db00177534c67343f18a6b4f8cb452b243d761bd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\120a9054e481c0fe48ee46d71fe8da31f1d546d2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0b4b669f66e8bdc25317c37aadecd94d09a25e67\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\d5978ef10dcf76c2510cf3a59642a8f22e06cce8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1d5ac1cf802309ecf73b9755444a5d10255fbdfa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\56df620407921e2d8ff05d170fd1d8442ca66aa7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_66e66f5a7a571dde94ed947cd897ce3ae298a623\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\9f2388a8e04552944443917d692403aefdf4bc3b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_63278ccd854cc16d5cee876aeb33ff933753be1b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\96a203937182b936397aa6fc35a64778650f1723\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_294fadaca55630f46be72cbb8ad1f8100d1cbe4e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\a14c77769d10acc0beda7806d3a3223306aeb228\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3debef23902b90d05afda6ffe35277663e84babd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\4cb4344e8ad03028222bd72bce34fe9dc70c066b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f8a81ada66267c5b3aaac08934d72ba04ed317d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\0ff873147420ef41ab9e727bae9717bdc2d68f7b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d37f7f14228776d8c220089c1bbc32d736e5b9e7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Pamela\.android\build-cache\96ee1d0625214d6e1451eebd5eb5428971144957\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\Pamela\Desktop\FutebolDosPais-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_008b012615d6ef7ddc84d419c62396a4d7935803\classes.dex" />
+    </item>
+
+</items>

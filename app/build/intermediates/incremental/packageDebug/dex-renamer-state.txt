@@ -1,0 +1,7 @@
+#Sun Sep 17 21:46:29 BRT 2017
+base.0=C\:\\Users\\Pamela\\Desktop\\FutebolDosPais-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_5b761e272ad690a5784c610f1f0d4c6ac9762d62
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\Pamela\\Desktop\\FutebolDosPais-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a49bac0471425b1104fd443cba45389a24a4fafe\\classes.dex
+base.1=C\:\\Users\\Pamela\\Desktop\\FutebolDosPais-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a49bac0471425b1104fd443cba45389a24a4fafe
+file.0=C\:\\Users\\Pamela\\Desktop\\FutebolDosPais-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_5b761e272ad690a5784c610f1f0d4c6ac9762d62\\classes.dex
