@@ -1,4 +1,4 @@
-<resources>
+  <resources>
     <string name="app_name">Futebol Dos Pais</string>
     <string name="item_jogos">Jogos</string>
     <string name="item_classificacao">Classificação</string>
@@ -11,5 +11,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Fui Criado!!!</string>
+    <string name="title_activity_document_viewer">Visualizador de Documentos</string>
 
 </resources>
