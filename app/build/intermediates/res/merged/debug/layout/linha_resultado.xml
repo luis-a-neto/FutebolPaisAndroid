@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="3dp"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/escudo_timeCasa"
+        android:layout_width="@dimen/res_tamanho_escudo"
+        android:layout_height="@dimen/res_tamanho_escudo"
+        android:background="@color/greenLight"
+        />
+
+    <TextView
+        android:id="@+id/nome_timeCasa"
+        android:layout_width="@dimen/res_largura_titulo"
+        android:layout_height="@dimen/res_altura_titulo"
+        android:background="@color/grayLight"
+        android:layout_toRightOf="@id/escudo_timeCasa"
+        android:layout_marginTop="@dimen/res_margem"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/gols_timeCasa"
+        android:layout_width="@dimen/res_altura_titulo"
+        android:layout_height="@dimen/res_altura_titulo"
+        android:layout_toRightOf="@id/nome_timeCasa"
+        android:layout_marginTop="@dimen/res_margem"
+        android:textSize="@dimen/res_tamanho_gols"
+        android:gravity="end"
+        />
+
+    <!-- Este aqui nao sera manipulado programaticamente. -->
+    <TextView
+        android:id="@+id/versus"
+        android:layout_width="@dimen/res_altura_titulo"
+        android:layout_height="@dimen/res_altura_titulo"
+        android:layout_marginTop="@dimen/res_margem"
+        android:text="X"
+        android:textSize="@dimen/res_tamanho_gols"
+        android:textAlignment="center"
+        android:layout_toRightOf="@id/gols_timeCasa"
+        />
+
+    <TextView
+        android:id="@+id/gols_timeVisitante"
+        android:layout_width="@dimen/res_altura_titulo"
+        android:layout_height="@dimen/res_altura_titulo"
+        android:layout_marginTop="@dimen/res_margem"
+        android:textSize="@dimen/res_tamanho_gols"
+        android:textAlignment="textStart"
+        android:layout_toRightOf="@id/versus"
+        />
+
+    <TextView
+        android:id="@+id/nome_timeVisitante"
+        android:layout_width="@dimen/res_largura_titulo"
+        android:layout_height="@dimen/res_altura_titulo"
+        android:background="@color/grayLight"
+        android:layout_marginTop="@dimen/res_margem"
+        android:layout_toRightOf="@id/gols_timeVisitante"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/escudo_timeVisitante"
+        android:layout_width="@dimen/res_tamanho_escudo"
+        android:layout_height="@dimen/res_tamanho_escudo"
+        android:radius="@dimen/res_raio_borda"
+        android:background="@color/greenLight"
+        android:layout_toRightOf="@id/nome_timeVisitante"
+        />
+
+    <TextView
+        android:id="@+id/dataHora"
+        android:layout_width="@dimen/res_largura_textos"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@id/escudo_timeCasa"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/estadio"
+        android:layout_width="@dimen/res_largura_textos"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dataHora"
+        android:textStyle="italic"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\ThirdSystem\.android\build-cache\a8999764152cfc8826b2c13f5965cd161115085b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="100c2548728b6c99e002328d3590b750a6afa9e5">
+        <dex dex="C:\Temp\FutebolDosPais\app\build\intermediates\pre-dexed\debug\classes_930324702cb26bd4f928bd93591b1bc50aca3318.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ThirdSystem\.android\build-cache\1e0a1f4dd3180f587fcb2f91d2b17c541c653050\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="acc7f730a7b9cccfc9251d727165bc37bbb8dd67">
+        <dex dex="C:\Temp\FutebolDosPais\app\build\intermediates\pre-dexed\debug\classes_5d03f5b64b5d9c4baa82079324472d2d3646728e.jar" />
+    </item>
+
+</items>

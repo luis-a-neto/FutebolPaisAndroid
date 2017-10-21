@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Temp\\FutebolDosPais\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher_round.png",
+        "source": "C:\\Temp\\FutebolDosPais\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Temp\\FutebolDosPais\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
+        "source": "C:\\Temp\\FutebolDosPais\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Temp\\FutebolDosPais\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_logo_2.png",
+        "source": "C:\\Temp\\FutebolDosPais\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_logo_2.png"
+    },
+    {
+        "merged": "C:\\Temp\\FutebolDosPais\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_logo.png",
+        "source": "C:\\Temp\\FutebolDosPais\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_logo.png"
+    }
+]

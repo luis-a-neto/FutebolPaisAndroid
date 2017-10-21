@@ -1,5 +1,6 @@
 package br.com.futeboldospais.futeboldospais.controller;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,18 +8,26 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 
-import br.com.futeboldospais.futeboldospais.views.ArtilhariaFragment;
-import br.com.futeboldospais.futeboldospais.views.ClassificacaoFragment;
-import br.com.futeboldospais.futeboldospais.views.SuspensoesFragment;
-import br.com.futeboldospais.futeboldospais.views.JogosFragment;
+import br.com.futeboldospais.futeboldospais.AtualizationService;
 import br.com.futeboldospais.futeboldospais.R;
+import br.com.futeboldospais.futeboldospais.dao.BancoDadosHelper;
 import br.com.futeboldospais.futeboldospais.util.BottomNavigationViewHelper;
 
 public class MainActivity extends AppCompatActivity {
 
     private Fragment fragmentoSelecionado = null;
+    private static String SAVED_EVENT = "controleEvento";
+    private int controleEvento;
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(SAVED_EVENT, controleEvento);
+        Log.d("teste", String.valueOf(controleEvento));
+    }
 
     /**
      * Listener do BottomNavigationView
@@ -34,15 +43,19 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.item_jogos:
                     fragmentoSelecionado = JogosFragment.newInstance();
+                    controleEvento = 0;
                     break;
                 case R.id.item_classificacao:
                     fragmentoSelecionado = ClassificacaoFragment.newInstance();
+                    controleEvento = 1;
                     break;
                 case R.id.item_artilharia:
                     fragmentoSelecionado = ArtilhariaFragment.newInstance();
+                    controleEvento = 2;
                     break;
                 case R.id.item_suspensoes:
-                    fragmentoSelecionado = SuspensoesFragment.newInstance();
+                    fragmentoSelecionado = CartoesFragment.newInstance();
+                    controleEvento = 3;
                     break;
             }
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -81,11 +94,48 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationViewHelper.disableShiftMode(navigation);
         //Adiciona o listener ao BottomNavigation instanciado
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        
+        int controle;
+
+        if(savedInstanceState==null) {
+            controle = 0;
+        }
+        else{
+            controle = savedInstanceState.getInt(SAVED_EVENT);
+        }
+
+        switch (controle){
+            case 0 :
+                fragmentoSelecionado = JogosFragment.newInstance();
+                break;
+            case 1 :
+                fragmentoSelecionado = ClassificacaoFragment.newInstance();
+                break;
+            case 2 :
+                fragmentoSelecionado = ArtilhariaFragment.newInstance();
+                break;
+            case 3 :
+                fragmentoSelecionado = CartoesFragment.newInstance();
+                break;
+        }
 
         //Inicia uma transação com o fragmento selecionado ao criar a view
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.content, JogosFragment.newInstance());
+        transaction.replace(R.id.content, fragmentoSelecionado);
         transaction.commit();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                BancoDadosHelper.FabricaDeConexao.criarBancoDados(getBaseContext());
+
+                Intent intent = new Intent(getBaseContext(), AtualizationService.class);
+                Log.d("teste", "1 - instanciou o intent");
+                startService(intent);
+                Log.d("teste", "1 - iniciou o servico");
+            }
+        }).start();
+
     }
 
 }

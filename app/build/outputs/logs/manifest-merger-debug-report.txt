@@ -1,0 +1,111 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:2:1-33:12
+	package
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:3:5-51
+		INJECTED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml
+application
+ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:5:5-27:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4996682d9f3e7f130f2aa96f5a0d73c8b1b9ce8b\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4b76f396bf344e501dcadc40b6ade258f41b710d\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\ThirdSystem\.android\build-cache\48c9b3510fa972f2e92d32a3ec41ec7f4cddee27\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\ThirdSystem\.android\build-cache\186805a719607e5700e6a97774bb06cb52170558\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\ThirdSystem\.android\build-cache\fbd64854f6c3a35bb537456b6b6fbfe4357a447b\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\ThirdSystem\.android\build-cache\ca82ecba08f09281ee148224d8baaa280e685504\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\ThirdSystem\.android\build-cache\ade8741eaa428b1b498d883a3df648e0d4e37a30\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\ThirdSystem\.android\build-cache\2e5af581109acca2edf08b89fe8dfbbcdd480d05\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\ThirdSystem\.android\build-cache\e93a5c3b8bd00bbe6fb5b26501fb50dd7eff49de\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4b0b920816222197b409e3d0c2821d2640ed17b1\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4d54575c5eb311b646ce804886d9dfa3ff923d90\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:9:9-46
+	android:allowBackup
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:7:9-41
+	android:theme
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:11:9-40
+activity#br.com.futeboldospais.futeboldospais.controller.MainActivity
+ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:12:9-20:20
+	android:label
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:14:13-45
+	android:name
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:13:13-52
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:15:13-19:29
+action#android.intent.action.MAIN
+ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:16:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:18:17-77
+	android:name
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:18:27-74
+service#br.com.futeboldospais.futeboldospais.AtualizationService
+ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:24:13-48
+uses-permission#android.permission.INTERNET
+ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:30:5-66
+	android:name
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:30:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:31:5-78
+	android:name
+		ADDED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml:31:22-76
+uses-sdk
+INJECTED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4996682d9f3e7f130f2aa96f5a0d73c8b1b9ce8b\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4b76f396bf344e501dcadc40b6ade258f41b710d\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\ThirdSystem\.android\build-cache\48c9b3510fa972f2e92d32a3ec41ec7f4cddee27\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\ThirdSystem\.android\build-cache\1c689fece514ae4a6962804f86a2a33824bc365d\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\ThirdSystem\.android\build-cache\186805a719607e5700e6a97774bb06cb52170558\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\ThirdSystem\.android\build-cache\fbd64854f6c3a35bb537456b6b6fbfe4357a447b\output\AndroidManifest.xml:20:5-43
+MERGED from [com.github.barteksc:android-pdf-viewer:2.7.0] C:\Users\ThirdSystem\.android\build-cache\1e0a1f4dd3180f587fcb2f91d2b17c541c653050\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.barteksc:pdfium-android:1.7.0] C:\Users\ThirdSystem\.android\build-cache\a8999764152cfc8826b2c13f5965cd161115085b\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\ThirdSystem\.android\build-cache\ca82ecba08f09281ee148224d8baaa280e685504\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\ThirdSystem\.android\build-cache\ade8741eaa428b1b498d883a3df648e0d4e37a30\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\ThirdSystem\.android\build-cache\2e5af581109acca2edf08b89fe8dfbbcdd480d05\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\ThirdSystem\.android\build-cache\e93a5c3b8bd00bbe6fb5b26501fb50dd7eff49de\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4b0b920816222197b409e3d0c2821d2640ed17b1\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4d54575c5eb311b646ce804886d9dfa3ff923d90\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4996682d9f3e7f130f2aa96f5a0d73c8b1b9ce8b\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Temp\FutebolDosPais\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4996682d9f3e7f130f2aa96f5a0d73c8b1b9ce8b\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4b76f396bf344e501dcadc40b6ade258f41b710d\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\ThirdSystem\.android\build-cache\48c9b3510fa972f2e92d32a3ec41ec7f4cddee27\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\ThirdSystem\.android\build-cache\1c689fece514ae4a6962804f86a2a33824bc365d\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\ThirdSystem\.android\build-cache\186805a719607e5700e6a97774bb06cb52170558\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\ThirdSystem\.android\build-cache\fbd64854f6c3a35bb537456b6b6fbfe4357a447b\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\ThirdSystem\.android\build-cache\ca82ecba08f09281ee148224d8baaa280e685504\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\ThirdSystem\.android\build-cache\ade8741eaa428b1b498d883a3df648e0d4e37a30\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\ThirdSystem\.android\build-cache\2e5af581109acca2edf08b89fe8dfbbcdd480d05\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\ThirdSystem\.android\build-cache\e93a5c3b8bd00bbe6fb5b26501fb50dd7eff49de\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4b0b920816222197b409e3d0c2821d2640ed17b1\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4d54575c5eb311b646ce804886d9dfa3ff923d90\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4996682d9f3e7f130f2aa96f5a0d73c8b1b9ce8b\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\ThirdSystem\.android\build-cache\4996682d9f3e7f130f2aa96f5a0d73c8b1b9ce8b\output\AndroidManifest.xml:26:9-47

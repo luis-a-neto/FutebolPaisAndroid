@@ -2,4 +2,14 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Dimensoes utilizadas na tela de tabela de resultados -->
+    <dimen name="res_tamanho_escudo">38dp</dimen>
+    <dimen name="res_margem">7dp</dimen>
+    <dimen name="res_raio_borda">24dp</dimen>
+    <dimen name="res_largura_titulo">90dp</dimen>
+    <dimen name="res_altura_titulo">24dp</dimen>
+    <dimen name="res_tamanho_gols">22dp</dimen>
+    <dimen name="res_largura_textos">210dp</dimen>
 </resources>

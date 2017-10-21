@@ -18,6 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Declaração de serviços da aplicação-->
+        <service
+            android:name=".AtualizationService"
+            android:exported="false"/>
+
     </application>
+
+    <!-- Declaração de permissões necessárias -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 </manifest>

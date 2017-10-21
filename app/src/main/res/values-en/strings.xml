@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Parents\' Soccer</string>
+    <string name="btn_master">Masters</string>
+    <string name="btn_senior">Seniors</string>
+    <string name="btn_todos">All</string>
+    <string name="item_artilharia">Artillery</string>
+    <string name="item_classificacao">Ranking</string>
+    <string name="item_jogos">Matches</string>
+    <string name="title_activity_document_viewer">Document Viewer</string>
+    <string name="document_viewer_error">Error opening the document. Please check your connection.</string>
+    <string name="document_viewer_invalid">Invalid file type.</string>
+    <string name="item_suspensoes">Cards</string>
+</resources>

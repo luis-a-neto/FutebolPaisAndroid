@@ -2,9 +2,9 @@ package br.com.futeboldospais.futeboldospais.util;
 
 import android.support.v4.app.Fragment;
 
-import br.com.futeboldospais.futeboldospais.views.PrimeiraRodadaFragment;
-import br.com.futeboldospais.futeboldospais.views.SegundaRodadaFragment;
-import br.com.futeboldospais.futeboldospais.views.TerceiraRodadaFragment;
+import br.com.futeboldospais.futeboldospais.controller.PrimeiraRodadaFragment;
+import br.com.futeboldospais.futeboldospais.controller.SegundaRodadaFragment;
+import br.com.futeboldospais.futeboldospais.controller.TerceiraRodadaFragment;
 
 /**
  * Created by Daniel Almeida on 15/09/2017.
@@ -34,21 +34,21 @@ public class NavegacaoRodadas {
         if(direcao == 1){
             if(fragment.equals(PrimeiraRodadaFragment.getInstance())){
                 navegacaoRodadasHelper.setFragmentoSelecionado(SegundaRodadaFragment.newInstance());
-                navegacaoRodadasHelper.setRodada("2º Turno - 2º Rodada");
+                navegacaoRodadasHelper.setRodada("1º Turno - 2º Rodada");
             }
             else if(fragment.equals(SegundaRodadaFragment.getInstance())){
                 navegacaoRodadasHelper.setFragmentoSelecionado(TerceiraRodadaFragment.newInstance());
-                navegacaoRodadasHelper.setRodada("2º Turno - 3º Rodada");
+                navegacaoRodadasHelper.setRodada("1º Turno - 3º Rodada");
             }
         }
         else if(direcao == 0){
             if(fragment.equals(TerceiraRodadaFragment.getInstance())){
                 navegacaoRodadasHelper.setFragmentoSelecionado(SegundaRodadaFragment.newInstance());
-                navegacaoRodadasHelper.setRodada("2º Turno - 2º Rodada");
+                navegacaoRodadasHelper.setRodada("1º Turno - 2º Rodada");
             }
             else if (fragment.equals(SegundaRodadaFragment.getInstance())){
                 navegacaoRodadasHelper.setFragmentoSelecionado(PrimeiraRodadaFragment.newInstance());
-                navegacaoRodadasHelper.setRodada("2º Turno - 1º Rodada");
+                navegacaoRodadasHelper.setRodada("1º Turno - 1º Rodada");
             }
         }
 
