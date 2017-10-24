@@ -56,7 +56,6 @@ public class PrimeiraRodadaFragment extends Fragment {
         tabelaResultado = (ListView) view.findViewById(R.id.primeira_rodada_tabela);
         Log.d("teste", "adapter fragment");
 
-
         resultadoService = new ResultadoService();
         listaResultado = resultadoService.listarDadosPorRodadaETurno(getActivity().getBaseContext(), 1, 1);
         adapter = new ResultadoAdapter(listaResultado, getActivity());

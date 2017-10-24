@@ -10,6 +10,6 @@
     <dimen name="res_raio_borda">24dp</dimen>
     <dimen name="res_largura_titulo">90dp</dimen>
     <dimen name="res_altura_titulo">24dp</dimen>
-    <dimen name="res_tamanho_gols">22dp</dimen>
+    <dimen name="res_tamanho_gols">18sp</dimen>
     <dimen name="res_largura_textos">210dp</dimen>
 </resources>

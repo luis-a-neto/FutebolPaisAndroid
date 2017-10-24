@@ -1,6 +1,7 @@
 package br.com.futeboldospais.futeboldospais.util;
 
 import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -10,6 +11,7 @@ import android.widget.TextView;
 public class ViewHolderClassificacao {
 
     private TextView posicao;
+    private ImageView escudo;
     private TextView equipe;
     private TextView pontosGanhos;
     private TextView jogos;
@@ -20,8 +22,9 @@ public class ViewHolderClassificacao {
         //Construtor padrão
     }
 
-    public ViewHolderClassificacao(TextView posicao, TextView equipe, TextView pontosGanhos, TextView jogos, TextView vitorias, TextView saldoGols) {
+    public ViewHolderClassificacao(TextView posicao, ImageView escudo, TextView equipe, TextView pontosGanhos, TextView jogos, TextView vitorias, TextView saldoGols) {
         this.posicao = posicao;
+        this.escudo = escudo;
         this.equipe = equipe;
         this.pontosGanhos = pontosGanhos;
         this.jogos = jogos;
@@ -35,6 +38,14 @@ public class ViewHolderClassificacao {
 
     public void setPosicao(TextView posicao) {
         this.posicao = posicao;
+    }
+
+    public ImageView getEscudo() {
+        return escudo;
+    }
+
+    public void setEscudo(ImageView escudo) {
+        this.escudo = escudo;
     }
 
     public TextView getEquipe() {

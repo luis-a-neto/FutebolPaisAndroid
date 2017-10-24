@@ -18,6 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".controller.DocumentViewer"
+            android:label="@string/title_activity_document_viewer"
+            android:theme="@style/AppTheme" />
 
         <!-- Declaração de serviços da aplicação-->
         <service
@@ -29,5 +33,7 @@
     <!-- Declaração de permissões necessárias -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
 </manifest>

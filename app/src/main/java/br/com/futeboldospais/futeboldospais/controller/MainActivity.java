@@ -53,9 +53,13 @@ public class MainActivity extends AppCompatActivity {
                     fragmentoSelecionado = ArtilhariaFragment.newInstance();
                     controleEvento = 2;
                     break;
-                case R.id.item_suspensoes:
+                case R.id.item_cartoes:
                     fragmentoSelecionado = CartoesFragment.newInstance();
                     controleEvento = 3;
+                    break;
+                case R.id.item_suspensos:
+                    fragmentoSelecionado = SuspensosFragment.newInstance();
+                    controleEvento = 4;
                     break;
             }
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -102,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             controle = savedInstanceState.getInt(SAVED_EVENT);
+            controleEvento = savedInstanceState.getInt(SAVED_EVENT);
         }
 
         switch (controle){
@@ -116,6 +121,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 3 :
                 fragmentoSelecionado = CartoesFragment.newInstance();
+                break;
+            case 4 :
+                fragmentoSelecionado = SuspensosFragment.newInstance();
                 break;
         }
 

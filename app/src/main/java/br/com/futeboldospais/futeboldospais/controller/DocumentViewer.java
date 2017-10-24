@@ -15,7 +15,7 @@ import com.github.barteksc.pdfviewer.PDFView;
 import java.io.InputStream;
 
 import br.com.futeboldospais.futeboldospais.R;
-import br.com.futeboldospais.futeboldospais.util.FileDownloadHelper;
+import br.com.futeboldospais.futeboldospais.rest.FileDownloadHelper;
 
 /**
     Projeto:    FutebolPaisAndroid

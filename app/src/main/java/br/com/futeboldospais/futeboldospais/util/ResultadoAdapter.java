@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import br.com.futeboldospais.futeboldospais.R;
 import br.com.futeboldospais.futeboldospais.model.Resultado;
+import br.com.futeboldospais.futeboldospais.service.DistintivoService;
 
 /**
  * Created by luis on 18/10/17.
@@ -18,6 +19,7 @@ import br.com.futeboldospais.futeboldospais.model.Resultado;
 
 public class ResultadoAdapter extends BaseAdapter{
 
+        private DistintivoService distintivoService;
         private Resultado[] listaResultado;
         private Activity activity;
 
@@ -66,6 +68,8 @@ public class ResultadoAdapter extends BaseAdapter{
                 view.setTag(viewHolderResultado);
             }
 
+            distintivoService = new DistintivoService();
+
             ViewHolderResultado viewHolderResultado = (ViewHolderResultado)view.getTag();
 
             viewHolderResultado.getDataHora().setText(listaResultado[position].getData() + " - " + listaResultado[position].getHorario());
@@ -78,8 +82,14 @@ public class ResultadoAdapter extends BaseAdapter{
             viewHolderResultado.getGolsVisitante().setText(String.valueOf(listaResultado[position].getGolsEquipe2()));
 
             // Implementar
-            viewHolderResultado.getEscudoCasa().setImageDrawable(null);
-            viewHolderResultado.getEscudoVisitante().setImageDrawable(null);
+            try {
+                viewHolderResultado.getEscudoCasa().setImageBitmap(distintivoService.carregarImagemDoArmazenamentoInterno(distintivoService.getDiretorio(), listaResultado[position].getEquipe1()));
+                viewHolderResultado.getEscudoVisitante().setImageBitmap(distintivoService.carregarImagemDoArmazenamentoInterno(distintivoService.getDiretorio(), listaResultado[position].getEquipe2()));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            //viewHolderResultado.getEscudoCasa().setImageDrawable(null);
+            //viewHolderResultado.getEscudoCasa().setImageDrawable(null);
 
             return view;
         }

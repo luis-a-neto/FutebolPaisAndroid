@@ -55,7 +55,6 @@ public class BancoDados {
         public static final String COLUNA_CONFIGURACAO_ULTIMA_ATUALIZACAO = "ultimaAtt";
         public static final String COLUNA_CONFIGURACAO_CAMPEONATO = "campeonato";
         public static final String COLUNA_CONFIGURACAO_VERSAO = "versao";
-        public static final String COLUNA_CONFIGURACAO_TEMA = "tema";
 
         /**
          * Dados da tabela de classificação geral
@@ -118,6 +117,7 @@ public class BancoDados {
         public static final String COLUNA_SUSPENSAO_JOGADOR = "jogador";
         public static final String COLUNA_SUSPENSAO_NUMERO = "numero";
         public static final String COLUNA_SUSPENSAO_CATEGORIA = "categoria";
+        public static final String COLUNA_SUSPENSAO_CRITERIO = "criterio";
         public static final String COLUNA_SUSPENSAO_JOGOS = "jogos";
         public static final String COLUNA_SUSPENSAO_MOTIVO = "motivo";
 
@@ -165,8 +165,7 @@ public class BancoDados {
             Tabela._ID + Tabela.TIPO_INTEIRO + Tabela.CHAVE_PRIMARIA + Tabela.AUTO_INCREMENTO + Tabela.VIRGULA +
             Tabela.COLUNA_CONFIGURACAO_ULTIMA_ATUALIZACAO + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
             Tabela.COLUNA_CONFIGURACAO_CAMPEONATO + Tabela.TIPO_INTEIRO + Tabela.VIRGULA +
-            Tabela.COLUNA_CONFIGURACAO_VERSAO + Tabela.TIPO_INTEIRO + Tabela.VIRGULA +
-            Tabela.COLUNA_CONFIGURACAO_TEMA + Tabela.TIPO_INTEIRO + Tabela.PARENTESES_SAIDA;
+            Tabela.COLUNA_CONFIGURACAO_VERSAO + Tabela.TIPO_INTEIRO + Tabela.PARENTESES_SAIDA;
 
     /**
      * Comando SQL para criar a tabela de classificaçao
@@ -208,7 +207,7 @@ public class BancoDados {
             Tabela.COLUNA_CARTAO_AMARELO_NUMERO + Tabela.TIPO_INTEIRO + Tabela.VIRGULA +
             Tabela.COLUNA_CARTAO_AMARELO_JOGADOR + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
             Tabela.COLUNA_CARTAO_AMARELO_DATA + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
-            Tabela.COLUNA_CARTAO_AMARELO_TEMPO + Tabela.TIPO_INTEIRO + Tabela.VIRGULA +
+            Tabela.COLUNA_CARTAO_AMARELO_TEMPO + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
             Tabela.COLUNA_CARTAO_AMARELO_ADVERSARIO + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
             Tabela.COLUNA_CARTAO_AMARELO_ARBITRO + Tabela.TIPO_TEXTO + Tabela.PARENTESES_SAIDA;
 
@@ -221,7 +220,7 @@ public class BancoDados {
             Tabela.COLUNA_CARTAO_VERMELHO_NUMERO + Tabela.TIPO_INTEIRO + Tabela.VIRGULA +
             Tabela.COLUNA_CARTAO_VERMELHO_JOGADOR + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
             Tabela.COLUNA_CARTAO_VERMELHO_DATA + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
-            Tabela.COLUNA_CARTAO_VERMELHO_TEMPO + Tabela.TIPO_INTEIRO + Tabela.VIRGULA +
+            Tabela.COLUNA_CARTAO_VERMELHO_TEMPO + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
             Tabela.COLUNA_CARTAO_VERMELHO_ADVERSARIO + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
             Tabela.COLUNA_CARTAO_VERMELHO_ARBITRO + Tabela.TIPO_TEXTO + Tabela.PARENTESES_SAIDA;
 
@@ -234,6 +233,7 @@ public class BancoDados {
             Tabela.COLUNA_SUSPENSAO_JOGADOR + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
             Tabela.COLUNA_SUSPENSAO_NUMERO + Tabela.TIPO_INTEIRO + Tabela.VIRGULA +
             Tabela.COLUNA_SUSPENSAO_CATEGORIA + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
+            Tabela.COLUNA_SUSPENSAO_CRITERIO + Tabela.TIPO_INTEIRO + Tabela.VIRGULA +
             Tabela.COLUNA_SUSPENSAO_JOGOS + Tabela.TIPO_TEXTO + Tabela.VIRGULA +
             Tabela.COLUNA_SUSPENSAO_MOTIVO + Tabela.TIPO_TEXTO + Tabela.PARENTESES_SAIDA;
 

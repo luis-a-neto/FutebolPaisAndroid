@@ -45,9 +45,9 @@ public class ArtilhariaService {
 
         List<Artilharia> lista;
 
-        //String json = artilhariaRest.getArtilharia(ConfiguracaoService.urlBase(campeonatoAno));
+        String json = artilhariaRest.getArtilharia(ConfiguracaoService.urlBase(campeonatoAno));
 
-        String json = "[" +
+        /*String json = "[" +
                 "  {" +
                 "   \"nome\": \"Corello\"," +
                 "   \"gols\": \"16\"," +
@@ -55,8 +55,8 @@ public class ArtilhariaService {
                 "   \"numero\": \"19\"," +
                 "   \"posicao\": \"Atacante\"," +
                 "   \"categoria\": \"Senior\"," +
-                "   \"amarelos\": \"2\"," +
-                "   \"vermelhos\": \"2\"" +
+                "   \"cartoesAmarelos\": \"2\"," +
+                "   \"cartoesVermelhos\": \"2\"" +
                 "  }," +
                 "  {" +
                 "   \"nome\": \"Espanhol\"," +
@@ -65,8 +65,8 @@ public class ArtilhariaService {
                 "   \"numero\": \"30\"," +
                 "   \"posicao\": \"Atacante\"," +
                 "   \"categoria\": \"Master\"," +
-                "   \"amarelos\": \"0\"," +
-                "   \"vermelhos\": \"0\"" +
+                "   \"cartoesAmarelos\": \"0\"," +
+                "   \"cartoesVermelhos\": \"0\"" +
                 "  }," +
                 "  {" +
                 "   \"nome\": \"Bello\"," +
@@ -75,8 +75,8 @@ public class ArtilhariaService {
                 "   \"numero\": \"17\"," +
                 "   \"posicao\": \"Atacante\"," +
                 "   \"categoria\": \"Master\"," +
-                "   \"amarelos\": \"1\"," +
-                "   \"vermelhos\": \"1\"" +
+                "   \"cartoesAmarelos\": \"1\"," +
+                "   \"cartoesVermelhos\": \"1\"" +
                 "  }," +
                 "  {" +
                 "   \"nome\": \"Zezito\"," +
@@ -85,8 +85,8 @@ public class ArtilhariaService {
                 "   \"numero\": \"10\"," +
                 "   \"posicao\": \"Atacante\"," +
                 "   \"categoria\": \"Master\"," +
-                "   \"amarelos\": \"0\"," +
-                "   \"vermelhos\": \"0\"" +
+                "   \"cartoesAmarelos\": \"0\"," +
+                "   \"cartoesVermelhos\": \"0\"" +
                 "  }," +
                 "  {" +
                 "   \"nome\": \"Joaozito\"," +
@@ -95,8 +95,8 @@ public class ArtilhariaService {
                 "   \"numero\": \"10\"," +
                 "   \"posicao\": \"Atacante\"," +
                 "   \"categoria\": \"Senior\"," +
-                "   \"amarelos\": \"0\"," +
-                "   \"vermelhos\": \"0\"" +
+                "   \"cartoesAmarelos\": \"0\"," +
+                "   \"cartoesVermelhos\": \"0\"" +
                 "  }," +
                 "  {" +
                 "   \"nome\": \"Pedrito\"," +
@@ -105,10 +105,10 @@ public class ArtilhariaService {
                 "   \"numero\": \"10\"," +
                 "   \"posicao\": \"Atacante\"," +
                 "   \"categoria\": \"Senior\"," +
-                "   \"amarelos\": \"0\"," +
-                "   \"vermelhos\": \"0\"" +
+                "   \"cartoesAmarelos\": \"0\"," +
+                "   \"cartoesVermelhos\": \"0\"" +
                 "  }" +
-                "]";
+                "]";*/
 
         Gson gson = new Gson();
         JSONArray jsonArray = null;

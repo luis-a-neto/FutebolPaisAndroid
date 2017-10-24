@@ -46,9 +46,9 @@ public class JogoService {
 
         List<Jogo> lista;
 
-        //String json = jogoRest.getJogo(ConfiguracaoService.urlBase(campeonatoAno));
+        String json = jogoRest.getJogo(ConfiguracaoService.urlBase(campeonatoAno));
 
-        String json = "[" +
+        /*String json = "[" +
                 " {" +
                 "  \"rodada\": \"3\"," +
                 "  \"turno\": \"1\"," +
@@ -130,7 +130,7 @@ public class JogoService {
                 "  \"equipe2\": \"Newcastle\"," +
                 "  \"categoria\": \"Senior\"" +
                 " }" +
-                "]";
+                "]";*/
 
         Gson gson = new Gson();
         JSONArray jsonArray = null;

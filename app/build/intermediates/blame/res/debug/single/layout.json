@@ -76,6 +76,10 @@
         "source": "C:\\Temp\\FutebolDosPais\\app\\src\\main\\res\\layout\\fragment_jogos.xml"
     },
     {
+        "merged": "C:\\Temp\\FutebolDosPais\\app\\build\\intermediates\\res\\merged\\debug\\layout\\linha_cartao.xml",
+        "source": "C:\\Temp\\FutebolDosPais\\app\\src\\main\\res\\layout\\linha_cartao.xml"
+    },
+    {
         "merged": "C:\\Temp\\FutebolDosPais\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_cartoes.xml",
         "source": "C:\\Temp\\FutebolDosPais\\app\\src\\main\\res\\layout\\fragment_cartoes.xml"
     },
@@ -230,6 +234,10 @@
     {
         "merged": "C:\\Temp\\FutebolDosPais\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_terceira_rodada.xml",
         "source": "C:\\Temp\\FutebolDosPais\\app\\src\\main\\res\\layout\\fragment_terceira_rodada.xml"
+    },
+    {
+        "merged": "C:\\Temp\\FutebolDosPais\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_suspensos.xml",
+        "source": "C:\\Temp\\FutebolDosPais\\app\\src\\main\\res\\layout\\fragment_suspensos.xml"
     },
     {
         "merged": "C:\\Temp\\FutebolDosPais\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_segunda_rodada.xml",

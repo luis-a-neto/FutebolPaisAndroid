@@ -45,9 +45,9 @@ public class ResultadoService {
 
         List<Resultado> lista;
 
-        //String json = resultadoRest.getResultado(ConfiguracaoService.urlBase(campeonatoAno));
+        String json = resultadoRest.getResultado(ConfiguracaoService.urlBase(campeonatoAno));
 
-        String json = "[" +
+        /*String json = "[" +
                 " {" +
                 "  \"data\": \"04/03/2017\"," +
                 "  \"horario\": \"08:30\"," +
@@ -348,7 +348,7 @@ public class ResultadoService {
                 "  \"rodada\": \"3\"," +
                 "  \"turno\": \"1\"" +
                 " }" +
-                "]";
+                "]";*/
 
         Gson gson = new Gson();
         JSONArray jsonArray = null;

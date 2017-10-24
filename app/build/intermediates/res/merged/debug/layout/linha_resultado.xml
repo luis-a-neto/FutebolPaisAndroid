@@ -4,21 +4,22 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="3dp"
-    android:gravity="center_horizontal">
+    android:paddingTop="15dp"
+    android:gravity="center_horizontal"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/escudo_timeCasa"
         android:layout_width="@dimen/res_tamanho_escudo"
         android:layout_height="@dimen/res_tamanho_escudo"
-        android:background="@color/greenLight"
+        android:background="@color/white"
         />
 
     <TextView
         android:id="@+id/nome_timeCasa"
         android:layout_width="@dimen/res_largura_titulo"
         android:layout_height="@dimen/res_altura_titulo"
-        android:background="@color/grayLight"
+        android:background="@color/white"
         android:layout_toRightOf="@id/escudo_timeCasa"
         android:layout_marginTop="@dimen/res_margem"
         android:gravity="center"
@@ -60,7 +61,7 @@
         android:id="@+id/nome_timeVisitante"
         android:layout_width="@dimen/res_largura_titulo"
         android:layout_height="@dimen/res_altura_titulo"
-        android:background="@color/grayLight"
+        android:background="@color/white"
         android:layout_marginTop="@dimen/res_margem"
         android:layout_toRightOf="@id/gols_timeVisitante"
         android:gravity="center"
@@ -71,7 +72,7 @@
         android:layout_width="@dimen/res_tamanho_escudo"
         android:layout_height="@dimen/res_tamanho_escudo"
         android:radius="@dimen/res_raio_borda"
-        android:background="@color/greenLight"
+        android:background="@color/white"
         android:layout_toRightOf="@id/nome_timeVisitante"
         />
 
@@ -92,6 +93,7 @@
         android:layout_below="@id/dataHora"
         android:textStyle="italic"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
         android:gravity="center"
         />
 

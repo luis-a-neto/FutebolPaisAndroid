@@ -13,7 +13,7 @@ public class Cartao implements Serializable{
     private int numero;
     private String jogador;
     private String data;
-    private int tempo;
+    private String tempo;
     private String adversario;
     private String arbitro;
 
@@ -49,11 +49,11 @@ public class Cartao implements Serializable{
         this.data = data;
     }
 
-    public int getTempo() {
+    public String getTempo() {
         return tempo;
     }
 
-    public void setTempo(int tempo) {
+    public void setTempo(String tempo) {
         this.tempo = tempo;
     }
 
@@ -80,7 +80,7 @@ public class Cartao implements Serializable{
                 ", numero=" + numero +
                 ", jogador='" + jogador + '\'' +
                 ", data='" + data + '\'' +
-                ", tempo=" + tempo +
+                ", tempo='" + tempo + '\'' +
                 ", adversario='" + adversario + '\'' +
                 ", arbitro='" + arbitro + '\'' +
                 '}';

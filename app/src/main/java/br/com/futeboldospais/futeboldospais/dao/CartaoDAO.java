@@ -126,7 +126,7 @@ public class CartaoDAO {
                     cartao.setNumero(c.getInt(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_AMARELO_NUMERO)));
                     cartao.setJogador(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_AMARELO_JOGADOR)));
                     cartao.setData(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_AMARELO_DATA)));
-                    cartao.setTempo(c.getInt(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_AMARELO_TEMPO)));
+                    cartao.setTempo(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_AMARELO_TEMPO)));
                     cartao.setAdversario(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_AMARELO_ADVERSARIO)));
                     cartao.setArbitro(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_AMARELO_ARBITRO)));
 
@@ -193,7 +193,7 @@ public class CartaoDAO {
                     cartao.setNumero(c.getInt(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_VERMELHO_NUMERO)));
                     cartao.setJogador(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_VERMELHO_JOGADOR)));
                     cartao.setData(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_VERMELHO_DATA)));
-                    cartao.setTempo(c.getInt(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_VERMELHO_TEMPO)));
+                    cartao.setTempo(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_VERMELHO_TEMPO)));
                     cartao.setAdversario(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_VERMELHO_ADVERSARIO)));
                     cartao.setArbitro(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CARTAO_VERMELHO_ARBITRO)));
 

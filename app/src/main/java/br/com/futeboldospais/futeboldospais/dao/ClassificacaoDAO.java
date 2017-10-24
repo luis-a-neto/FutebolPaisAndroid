@@ -19,10 +19,10 @@ import java.util.List;
 public class ClassificacaoDAO {
 
     /**
+     * @param bd    Conexão de gravação passada para execução do comando SQL
+     * @param lista ArrayList de objetos passados para carregar as informações no ContentValues
      * @author Daniel Almeida
      * Metodo utilizado para gravar novos dados na tabela do banco de dados
-     * @param bd Conexão de gravação passada para execução do comando SQL
-     * @param lista ArrayList de objetos passados para carregar as informações no ContentValues
      */
     public void inserirDados(SQLiteDatabase bd, List<Classificacao> lista) {
 
@@ -40,19 +40,19 @@ public class ClassificacaoDAO {
     }
 
     /**
+     * @param bd Conexão de gravação passada para execução do comando SQL
      * @author Daniel Almeida
      * Metodo utilizado para deletar todos os dados da tabela no banco de dados
-     * @param bd Conexão de gravação passada para execução do comando SQL
      */
     public void deletarDados(SQLiteDatabase bd) {
         bd.delete(BancoDados.Tabela.TABELA_CLASSIFICACAO, null, null);
     }
 
     /**
-     * @author Daniel Almeida
-     * Este metodo serve para buscar o cadastro da clasificação geral no banco
      * @param context Contexto da aplicação passado para obter conexão de leitura com o banco de dados
      * @return Retorna um vetor do tipo Classificacao
+     * @author Daniel Almeida
+     * Este metodo serve para buscar o cadastro da clasificação geral no banco
      */
     public Classificacao[] listarDados(Context context) {
 
@@ -80,7 +80,7 @@ public class ClassificacaoDAO {
                     null
             );
 
-            if(c.getCount() != 0) {
+            if (c.getCount() != 0) {
                 while (c.moveToNext()) {
                     classificacao = new Classificacao();
                     classificacao.setEquipe(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CLASSIFICACAO_EQUIPE)));
@@ -93,8 +93,7 @@ public class ClassificacaoDAO {
                     retLista.add(classificacao);
                 }
                 lista = retLista.toArray(new Classificacao[0]);
-            }
-            else{
+            } else {
                 lista = new Classificacao[0];
             }
         } catch (Exception e) {
@@ -105,6 +104,44 @@ public class ClassificacaoDAO {
             }
         }
 
+        return lista;
+    }
+
+    public List<Classificacao> listarEquipes(Context context) {
+        SQLiteDatabase bd = BancoDadosHelper.FabricaDeConexao.getConexaoAplicacao(context);
+        ArrayList<Classificacao> lista = new ArrayList<>();
+        Classificacao classificacao;
+        Cursor c = null;
+
+        try {
+
+            String[] selectColunasFrom = {BancoDados.Tabela._ID,
+                    BancoDados.Tabela.COLUNA_CLASSIFICACAO_EQUIPE};
+
+            c = bd.query(BancoDados.Tabela.TABELA_CLASSIFICACAO,
+                    selectColunasFrom,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+            );
+
+            while (c.moveToNext()) {
+                classificacao = new Classificacao();
+                classificacao.setEquipe(c.getString(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CLASSIFICACAO_EQUIPE)));
+
+                Log.d("teste", classificacao.toString());
+                lista.add(classificacao);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+        }
         return lista;
     }
 }

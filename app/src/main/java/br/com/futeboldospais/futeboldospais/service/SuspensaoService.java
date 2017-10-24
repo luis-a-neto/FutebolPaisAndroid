@@ -53,6 +53,7 @@ public class SuspensaoService {
                 "   \"jogador\": \"Amaro\"," +
                 "   \"numero\": \"10\"," +
                 "   \"categoria\": \"Master\"," +
+                "   \"criterio\": \"1\"," +
                 "   \"jogos\": \"1/1\"," +
                 "   \"motivo\": \"Cartao Vermelho\"" +
                 "  }," +
@@ -61,6 +62,7 @@ public class SuspensaoService {
                 "   \"jogador\": \"Pina\"," +
                 "   \"numero\": \"9\"," +
                 "   \"categoria\": \"Master\"," +
+                "   \"criterio\": \"1\"," +
                 "   \"jogos\": \"1/2\"," +
                 "   \"motivo\": \"Cartao Vermelho\"" +
                 "  }," +
@@ -69,6 +71,7 @@ public class SuspensaoService {
                 "   \"jogador\": \"Nelson\"," +
                 "   \"numero\": \"23\"," +
                 "   \"categoria\": \"Senior\"," +
+                "   \"criterio\": \"1\"," +
                 "   \"jogos\": \"1/1\"," +
                 "   \"motivo\": \"3 Cartões Amarelos\"" +
                 "  }" +

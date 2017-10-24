@@ -41,8 +41,7 @@ public class ConfiguracaoService {
 
         String json = "{" +
                 "\"campeonatoAno\":\"2017\"," +
-                "\"versao\":\"1\"," +
-                "\"tema\":\"1\"" +
+                "\"versao\":\"1\"" +
                 "}";
 
         Gson gson = new Gson();
@@ -63,6 +62,10 @@ public class ConfiguracaoService {
 
     public int getVersaoLocal(Context context) {
         return dao.getVersaoLocal(context);
+    }
+
+    public int getCampeonatoAnoLocal(Context context){
+        return dao.getCampeonatoAnoLocal(context);
     }
 
     public String getUltimaAtualizacao(Context context) {

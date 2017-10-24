@@ -1,15 +1,18 @@
 package br.com.futeboldospais.futeboldospais.util;
 
 import android.content.Context;
+import android.media.Image;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import br.com.futeboldospais.futeboldospais.R;
 import br.com.futeboldospais.futeboldospais.model.Classificacao;
+import br.com.futeboldospais.futeboldospais.service.DistintivoService;
 
 /**
  * Created by danieldea on 28/09/2017.
@@ -17,6 +20,7 @@ import br.com.futeboldospais.futeboldospais.model.Classificacao;
 
 public class ClassificacaoAdapter extends BaseAdapter{
 
+    private DistintivoService distintivoService;
     private Classificacao[] listaClassificacao;
     private Context context;
 
@@ -52,6 +56,7 @@ public class ClassificacaoAdapter extends BaseAdapter{
             view = inflater.inflate(R.layout.linha_classificacao, parent, false);
 
             TextView posicao = (TextView) view.findViewById(R.id.posicao);
+            ImageView escudo = (ImageView) view.findViewById(R.id.escudo);
             TextView equipe = (TextView) view.findViewById(R.id.equipe);
             TextView pontosGanhos = (TextView) view.findViewById(R.id.pontos_ganhos);
             TextView jogos = (TextView) view.findViewById(R.id.jogos);
@@ -59,16 +64,23 @@ public class ClassificacaoAdapter extends BaseAdapter{
             TextView saldoGols = (TextView) view.findViewById(R.id.saldo_gols);
             Log.d("teste", "Abaixo dos Find");
 
-            ViewHolderClassificacao viewHolderClassificacao = new ViewHolderClassificacao(posicao, equipe, pontosGanhos, jogos, vitorias, saldoGols);
+            ViewHolderClassificacao viewHolderClassificacao = new ViewHolderClassificacao(posicao, escudo, equipe, pontosGanhos, jogos, vitorias, saldoGols);
             Log.d("teste", "Abaixo do viewholder");
 
             view.setTag(viewHolderClassificacao);
             Log.d("teste", "Seto a tag");
         }
 
+        distintivoService = new DistintivoService();
+
         ViewHolderClassificacao viewHolderClassificacao = (ViewHolderClassificacao)view.getTag();
         Log.d("teste", "Pego a tag");
         viewHolderClassificacao.getPosicao().setText(String.valueOf(position + 1) + "º");
+        try {
+            viewHolderClassificacao.getEscudo().setImageBitmap(distintivoService.carregarImagemDoArmazenamentoInterno(distintivoService.getDiretorio(), listaClassificacao[position].getEquipe()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         viewHolderClassificacao.getEquipe().setText(listaClassificacao[position].getEquipe());
         Log.d("teste", "Carregou o viewholder 1");
         viewHolderClassificacao.getPontosGanhos().setText(String.valueOf(listaClassificacao[position].getPontosGanhos()));

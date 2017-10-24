@@ -24,22 +24,21 @@ public class ConfiguracaoDAO {
      * caso a atualização do conteúdo do banco dados tenha sido realizado com sucesso
      * @param bd Conexão de gravação passada para execução do comando SQL
      * @param configuracaoServidor Configuração obtida do servidor na internet
-     * @param versaoLocal Versão atual no banco de dados dos dados da aplicação
+     * @param campeonatoAnoLocal Ano do campeonato atual no banco de dados dos dados da aplicação
      */
-    public void atualizarVersaoLocal(SQLiteDatabase bd, Configuracao configuracaoServidor, int versaoLocal) {
+    public void atualizarVersaoLocal(SQLiteDatabase bd, Configuracao configuracaoServidor, int campeonatoAnoLocal) {
 
         Date dataHora = new Date();
         ContentValues valores = new ContentValues();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
-        Log.d("teste", "versao passada: " + versaoLocal);
-        if(versaoLocal == -1){
+        Log.d("teste", "versao passada: " + campeonatoAnoLocal);
+        if(campeonatoAnoLocal == -1){
             Log.d("teste", "entrou no if");
             Log.d("teste", dateFormat.format(dataHora));
             valores.put(BancoDados.Tabela.COLUNA_CONFIGURACAO_ULTIMA_ATUALIZACAO, dateFormat.format(dataHora));
             valores.put(BancoDados.Tabela.COLUNA_CONFIGURACAO_CAMPEONATO, configuracaoServidor.getCampeonatoAno());
             valores.put(BancoDados.Tabela.COLUNA_CONFIGURACAO_VERSAO, configuracaoServidor.getVersao());
-            valores.put(BancoDados.Tabela.COLUNA_CONFIGURACAO_TEMA, configuracaoServidor.getTema());
 
             bd.insert(BancoDados.Tabela.TABELA_CONFIGURACAO, null, valores);
             Log.d("teste", "inseriu a versao");
@@ -50,7 +49,6 @@ public class ConfiguracaoDAO {
             valores.put(BancoDados.Tabela.COLUNA_CONFIGURACAO_ULTIMA_ATUALIZACAO, dateFormat.format(dataHora));
             valores.put(BancoDados.Tabela.COLUNA_CONFIGURACAO_CAMPEONATO, configuracaoServidor.getCampeonatoAno());
             valores.put(BancoDados.Tabela.COLUNA_CONFIGURACAO_VERSAO, configuracaoServidor.getVersao());
-            valores.put(BancoDados.Tabela.COLUNA_CONFIGURACAO_TEMA, configuracaoServidor.getTema());
             Log.d("teste", "inseriu os valores");
             int count = bd.update(
                     BancoDados.Tabela.TABELA_CONFIGURACAO,
@@ -102,6 +100,44 @@ public class ConfiguracaoDAO {
         }
 
         return versao;
+    }
+
+    public int getCampeonatoAnoLocal(Context context){
+
+        SQLiteDatabase bd = BancoDadosHelper.FabricaDeConexao.getConexaoAplicacao(context);
+        Cursor c = null;
+        int campeonatoAno = -1;
+
+        try{
+
+            String[] selectColunasFrom = {BancoDados.Tabela.COLUNA_CONFIGURACAO_CAMPEONATO};
+
+            c = bd.query(BancoDados.Tabela.TABELA_CONFIGURACAO,
+                    selectColunasFrom,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+            );
+
+            if(c.moveToFirst()){
+                campeonatoAno = c.getInt(c.getColumnIndexOrThrow(BancoDados.Tabela.COLUNA_CONFIGURACAO_CAMPEONATO));
+            }
+            else{
+                campeonatoAno = -1;
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            if(c != null) {
+                c.close();
+            }
+        }
+
+        return campeonatoAno;
     }
 
     /**

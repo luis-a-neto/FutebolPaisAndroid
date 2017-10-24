@@ -18,17 +18,19 @@ import br.com.futeboldospais.futeboldospais.service.ArtilhariaService;
 import br.com.futeboldospais.futeboldospais.service.CartaoService;
 import br.com.futeboldospais.futeboldospais.service.ClassificacaoService;
 import br.com.futeboldospais.futeboldospais.service.ConfiguracaoService;
+import br.com.futeboldospais.futeboldospais.service.DistintivoService;
 import br.com.futeboldospais.futeboldospais.service.JogoService;
 import br.com.futeboldospais.futeboldospais.service.ResultadoService;
 import br.com.futeboldospais.futeboldospais.service.SuspensaoService;
 
 /**
- * Created by danieldea on 09/10/2017.
+ * Created by Daniel Almeida on 09/10/2017.
  */
 
 public class Atualizacao {
 
     private ConfiguracaoService configuracaoService;
+    private DistintivoService distintivoService;
     private ClassificacaoService classificacaoService;
     private ArtilhariaService artilhariaService;
     private CartaoService cartaoService;
@@ -37,7 +39,7 @@ public class Atualizacao {
     private JogoService jogoService;
     private Context context;
 
-    public Atualizacao(Context context){
+    public Atualizacao(Context context) {
         this.context = context;
     }
 
@@ -49,7 +51,9 @@ public class Atualizacao {
         Configuracao configuracaoServidor;
 
         int versaoLocal;
-        int versaoAtual;
+        int versaoServidor;
+        int campeonatoAnoLocal;
+        int campeonatoAnoServidor;
 
         try {
             configuracaoService = new ConfiguracaoService();
@@ -60,24 +64,26 @@ public class Atualizacao {
 
             versaoLocal = configuracaoService.getVersaoLocal(context);
             Log.d("teste", "versao local: " + versaoLocal);
-            versaoAtual = configuracaoServidor.getVersao();
-            Log.d("teste", "versao atual: " + versaoAtual);
-
-            Log.d("teste", "campeonato ano: " + configuracaoServidor.getCampeonatoAno());
+            versaoServidor = configuracaoServidor.getVersao();
+            Log.d("teste", "versao atual: " + versaoServidor);
+            campeonatoAnoLocal = configuracaoService.getCampeonatoAnoLocal(context);
+            Log.d("teste", "campeonato ano local: " + campeonatoAnoLocal);
+            campeonatoAnoServidor = configuracaoServidor.getCampeonatoAno();
+            Log.d("teste", "campeonato ano servidor: " + campeonatoAnoServidor);
             Log.d("teste", "ultima atualizacao: " + configuracaoService.getUltimaAtualizacao(context));
 
-            if (versaoLocal == -1) {
-                atualizacaoStatus = atualizarDados(configuracaoServidor, versaoLocal, configuracaoService);
+            if (campeonatoAnoLocal == -1) {
+                atualizacaoStatus = atualizarDados(configuracaoServidor, campeonatoAnoLocal, configuracaoService);
                 Log.d("teste", "executou primeira atualizacao");
-            } else if (versaoLocal != versaoAtual) {
-                atualizacaoStatus = atualizarDados(configuracaoServidor, versaoLocal, configuracaoService);
-                Log.d("teste", "executou atualizacao");
-            }
-            else{
+            } else if (campeonatoAnoLocal != campeonatoAnoServidor) {
+                atualizacaoStatus = atualizarDados(configuracaoServidor, campeonatoAnoLocal, configuracaoService);
+                Log.d("teste", "executou atualizacao anual");
+            } else if (versaoLocal != versaoServidor) {
+                atualizacaoStatus = atualizarDados(configuracaoServidor, campeonatoAnoLocal, configuracaoService);
+                Log.d("teste", "executou atualizacao semanal");
+            } else {
                 Log.d("teste", "nao executou atualizacao");
             }
-
-            atualizacaoStatus = true;
 
         } catch (Exception e) {
             atualizacaoStatus = false;
@@ -86,7 +92,7 @@ public class Atualizacao {
         return atualizacaoStatus;
     }
 
-    public boolean atualizarDados(Configuracao configuracaoServidor, int versaoLocal, ConfiguracaoService configuracaoService) throws Exception{
+    public boolean atualizarDados(Configuracao configuracaoServidor, int campeonatoAnoLocal, ConfiguracaoService configuracaoService) throws Exception {
         Log.d("teste", "entrou no atualizar dados");
 
         boolean atualizacaoStatus = false;
@@ -94,7 +100,16 @@ public class Atualizacao {
         SQLiteDatabase bd = null;
         Log.d("teste", "criou sqlitehelper");
 
+        List<Classificacao> listaClassificacao = null;
+        List<Artilharia> listaArtilharia;
+        List<Cartao> listaCartaoAmarelo;
+        List<Cartao> listaCartaoVermelho;
+        List<Suspensao> listaSuspensao;
+        List<Resultado> listaResutado;
+        List<Jogo> listaJogo;
+
         try {
+            distintivoService = new DistintivoService();
             classificacaoService = new ClassificacaoService();
             artilhariaService = new ArtilhariaService();
             cartaoService = new CartaoService();
@@ -106,14 +121,16 @@ public class Atualizacao {
             bd = BancoDadosHelper.FabricaDeConexao.getConexaoServico(context);
             Log.d("teste", "recebeu uma conexao de servico");
 
-            List<Classificacao> listaClassificacao = classificacaoService.getClassificacao(configuracaoServidor.getCampeonatoAno());
-            List<Artilharia> listaArtilharia = artilhariaService.getArtilharia(configuracaoServidor.getCampeonatoAno());
-            List<Cartao> listaCartaoAmarelo = cartaoService.getCartaoAmarelo(configuracaoServidor.getCampeonatoAno());
-            List<Cartao> listaCartaoVermelho = cartaoService.getCartaoVermelho(configuracaoServidor.getCampeonatoAno());
-            List<Suspensao> listaSuspensao = suspensaoService.getSuspensao(configuracaoServidor.getCampeonatoAno());
-            List<Resultado> listaResutado = resultadoService.getResultado(configuracaoServidor.getCampeonatoAno());
-            List<Jogo> listaJogo = jogoService.getJogo(configuracaoServidor.getCampeonatoAno());
+            listaClassificacao = classificacaoService.getClassificacao(configuracaoServidor.getCampeonatoAno());
+            listaArtilharia = artilhariaService.getArtilharia(configuracaoServidor.getCampeonatoAno());
+            listaCartaoAmarelo = cartaoService.getCartaoAmarelo(configuracaoServidor.getCampeonatoAno());
+            listaCartaoVermelho = cartaoService.getCartaoVermelho(configuracaoServidor.getCampeonatoAno());
+            listaSuspensao = suspensaoService.getSuspensao(configuracaoServidor.getCampeonatoAno());
+            listaResutado = resultadoService.getResultado(configuracaoServidor.getCampeonatoAno());
+            listaJogo = jogoService.getJogo(configuracaoServidor.getCampeonatoAno());
             Log.d("teste", "carregou as listas");
+
+            distintivoService.atualizarDistintivos(context, configuracaoServidor.getCampeonatoAno(), campeonatoAnoLocal, listaClassificacao);
 
             bd.beginTransaction();
             Log.d("teste", "iniciou a transacao");
@@ -133,7 +150,7 @@ public class Atualizacao {
             jogoService.inserirDados(bd, listaJogo);
             Log.d("teste", "inseriu novos dados");
 
-            configuracaoService.atualizarVersaoLocal(bd, configuracaoServidor, versaoLocal);
+            configuracaoService.atualizarVersaoLocal(bd, configuracaoServidor, campeonatoAnoLocal);
             Log.d("teste", "atualizou a versao");
 
             bd.setTransactionSuccessful();
@@ -142,10 +159,20 @@ public class Atualizacao {
             atualizacaoStatus = true;
 
         } catch (Exception e) {
+            try {
+                if(campeonatoAnoLocal == -1) {
+                    distintivoService.excluirImagemNoArmazenamentoInterno(distintivoService.getDiretorio(), listaClassificacao);
+                }else if(campeonatoAnoLocal != configuracaoServidor.getCampeonatoAno()){
+                    distintivoService.excluirImagemNoArmazenamentoInterno(distintivoService.getDiretorio(), listaClassificacao);
+                }
+            }
+            catch (Exception ex){
+                atualizacaoStatus = false;
+            }
             atualizacaoStatus = false;
             Log.d("teste", " 2 - transacao falhou");
         } finally {
-            if(bd != null) {
+            if (bd != null) {
                 bd.endTransaction();
                 Log.d("teste", "1 - finalizou transacao com sucesso, 2 - deu rollback");
             }

@@ -13,6 +13,7 @@ public class Suspensao implements Serializable{
     private String jogador;
     private int numero;
     private String categora;
+    private int criterio;
     private String jogos;
     private String motivo;
 
@@ -48,6 +49,14 @@ public class Suspensao implements Serializable{
         this.categora = categora;
     }
 
+    public int getCriterio() {
+        return criterio;
+    }
+
+    public void setCriterio(int criterio) {
+        this.criterio = criterio;
+    }
+
     public String getJogos() {
         return jogos;
     }
@@ -71,6 +80,7 @@ public class Suspensao implements Serializable{
                 ", jogador='" + jogador + '\'' +
                 ", numero=" + numero +
                 ", categora='" + categora + '\'' +
+                ", criterio=" + criterio +
                 ", jogos='" + jogos + '\'' +
                 ", motivo='" + motivo + '\'' +
                 '}';

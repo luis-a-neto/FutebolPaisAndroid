@@ -12,7 +12,6 @@ public class Configuracao implements Serializable{
 
     private int campeonatoAno;
     private int versao;
-    private int tema;
 
     public int getCampeonatoAno() {
         return campeonatoAno;
@@ -30,20 +29,11 @@ public class Configuracao implements Serializable{
         this.versao = versao;
     }
 
-    public int getTema() {
-        return tema;
-    }
-
-    public void setTema(int tema) {
-        this.tema = tema;
-    }
-
     @Override
     public String toString() {
         return "Configuracao{" +
                 "campeonatoAno=" + campeonatoAno +
                 ", versao=" + versao +
-                ", tema=" + tema +
                 '}';
     }
 }

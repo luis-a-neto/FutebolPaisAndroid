@@ -45,9 +45,9 @@ public class ClassificacaoService {
 
         List<Classificacao> lista;
 
-        //String json = classificacaoRest.getClassificacao(ConfiguracaoService.urlBase(campeonatoAno));
+        String json = classificacaoRest.getClassificacao(ConfiguracaoService.urlBase(campeonatoAno));
 
-        String json = "[" +
+        /*String json = "[" +
                 " {" +
                 "  \"equipe\": \"Ferroviaria\"," +
                 "  \"pontosGanhos\": \"74\"," +
@@ -152,7 +152,7 @@ public class ClassificacaoService {
                 "  \"cartoesAmarelos\": \"37\"," +
                 "  \"cartoesVermelhos\": \"4\"" +
                 " }" +
-                "]";
+                "]";*/
 
         Gson gson = new Gson();
         JSONArray jsonArray = null;
@@ -194,5 +194,9 @@ public class ClassificacaoService {
      */
     public Classificacao[] listarDados(Context context){
         return dao.listarDados(context);
+    }
+
+    public List<Classificacao> listarEquipes(Context context){
+        return dao.listarEquipes(context);
     }
 }
