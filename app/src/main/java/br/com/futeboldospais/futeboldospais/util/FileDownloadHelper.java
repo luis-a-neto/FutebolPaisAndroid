@@ -28,21 +28,21 @@ import okhttp3.ResponseBody;
     Histórico de modificações:
     Data ______ Autor _________________ Resumo ___________________________________________________
     24.09.2017  Luis Andrade            Inicial
- */
+    01.11.2017  Luis Andrade            Readequação da arquitetura de multithreading
+**/
 
 public class FileDownloadHelper {
 
     public static boolean checkConnectivity(Context context) {
         ConnectivityManager cm =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-
         return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnected();
     }
 
     private static ResponseBody downloadFile(Context context, String uri) throws Exception {
-            OkHttpClient client = new OkHttpClient();
-            Request request = new Request.Builder().url(uri).build();
-            return client.newCall(request).execute().body();
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder().url(uri).build();
+        return client.newCall(request).execute().body();
     }
 
     public static String downloadText(Context context, String uri) throws Exception {
