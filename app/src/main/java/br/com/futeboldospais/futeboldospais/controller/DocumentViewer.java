@@ -23,7 +23,6 @@ import br.com.futeboldospais.futeboldospais.util.FileDownloadHelper;
 
     Activity de visualizador de documentos. A mesma é reutilizável, com o intuito
     de permitir a visualização de súmulas (PDF/JPEG) e regulamentos (PDF).
-
     O intent deverá trazer nos extras as seguintes strings:
     - url (o documento a ser exibido)
     - title (o título a ser exibido na janela)

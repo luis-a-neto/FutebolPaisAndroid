@@ -1,6 +1,8 @@
 package br.com.futeboldospais.futeboldospais.controller;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.util.TimeUtils;
@@ -8,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import br.com.futeboldospais.futeboldospais.R;
@@ -25,6 +28,7 @@ public class ClassificacaoFragment extends Fragment {
      * Created by Daniel Almeida on 08/09/2017.
      * Cria um singleton da classe
      */
+
     private static ClassificacaoFragment fragment = null;
 
     public static ClassificacaoFragment newInstance() {
@@ -52,26 +56,25 @@ public class ClassificacaoFragment extends Fragment {
         tabelaClassificacao = (ListView) view.findViewById(R.id.classificacao_tabela);
         Log.d("teste", "adapter fragment");
 
-
         classificacaoService = new ClassificacaoService();
         listaClassificacao = classificacaoService.listarDados(getActivity().getBaseContext());
         adapter = new ClassificacaoAdapter(listaClassificacao, getActivity());
         tabelaClassificacao.setAdapter(adapter);
 
-
-        /*tabelaClassificacao.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        tabelaClassificacao.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                //Intent intent = new Intent("", "");
-                //intent.putExtra("", "");
+                Intent intent = new Intent(getContext(), DocumentViewer.class);
+                intent.putExtra("title", "Súmula");
+                intent.putExtra("url", "");
 
-                //startActivity(intent);
+                startActivity(intent);
             }
 
-        });*/
+        });
 
         // Inflate the layout for this fragment
         return view;

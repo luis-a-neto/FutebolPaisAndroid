@@ -4,8 +4,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by luis on 19/10/17.
- */
+    Projeto:    FutebolPaisAndroid
+    Arquivo:    ViewHolderResultado.java
+    Autor:      Luis Andrade
+    Data:       24.09.2017
+
+    Classe ViewHolder de resultados. Temos oito elementos para cada resultado listado.
+
+    Histórico de modificações:
+    Data ______ Autor _________________ Resumo ___________________________________________________
+    24.09.2017  Luis Andrade            Inicial
+    29.09.2017  Daniel Almeida          Adequação
+**/
 
 public class ViewHolderResultado {
 
