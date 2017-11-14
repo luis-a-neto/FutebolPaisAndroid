@@ -1,11 +1,8 @@
 package br.com.futeboldospais.futeboldospais.controller;
 
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.util.TimeUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,7 +60,7 @@ public class ClassificacaoFragment extends Fragment {
 
         tabelaClassificacao.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            @Override
+        /*    @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
@@ -72,7 +69,7 @@ public class ClassificacaoFragment extends Fragment {
                 intent.putExtra("url", "");
 
                 startActivity(intent);
-            }
+            } */
 
         });
 

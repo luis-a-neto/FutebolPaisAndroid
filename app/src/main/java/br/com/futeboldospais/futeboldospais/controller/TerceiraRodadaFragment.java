@@ -1,12 +1,14 @@
 package br.com.futeboldospais.futeboldospais.controller;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import br.com.futeboldospais.futeboldospais.R;
@@ -61,6 +63,20 @@ public class TerceiraRodadaFragment extends Fragment {
         listaResultado = resultadoService.listarDadosPorRodadaETurno(getActivity().getBaseContext(), 3, 1);
         adapter = new ResultadoAdapter(listaResultado, getActivity());
         tabelaResultado.setAdapter(adapter);
+
+        tabelaResultado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = new Intent(getContext(), DocumentViewer.class);
+                intent.putExtra("title", "Súmula");
+                intent.putExtra("url", "");
+
+                startActivity(intent);
+            }
+
+        });
 
         return view;
     }

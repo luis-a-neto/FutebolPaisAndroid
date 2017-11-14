@@ -43,6 +43,14 @@ public class ResultadoAdapter extends BaseAdapter{
             return position;
         }
 
+        public String getItemUrl(int position){
+            return "http://www.futeboldospais.com.br/campeonato2017/sumulas/Jogo_" +
+                    listaResultado[position].getData() + "_" +
+                    listaResultado[position].getHorario() + "_" +
+                    listaResultado[position].getCategoria() +
+                    "_frente.pdf";
+        }
+
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             View view = convertView;
