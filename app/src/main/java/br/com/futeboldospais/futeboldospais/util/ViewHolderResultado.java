@@ -4,6 +4,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
+<<<<<<< HEAD
     Projeto:    FutebolPaisAndroid
     Arquivo:    ViewHolderResultado.java
     Autor:      Luis Andrade
@@ -16,6 +17,10 @@ import android.widget.TextView;
     24.09.2017  Luis Andrade            Inicial
     29.09.2017  Daniel Almeida          Adequação
 **/
+=======
+ * Created by luis on 19/10/17.
+ */
+>>>>>>> repo-pamela/master
 
 public class ViewHolderResultado {
 
@@ -29,9 +34,15 @@ public class ViewHolderResultado {
     TextView golsVisitante;
 
     TextView dataHora;
+<<<<<<< HEAD
     TextView estadio;
 
     public ViewHolderResultado(ImageView escudoCasa, ImageView escudoVisitante, TextView timeCasa, TextView timeVisitante, TextView golsCasa, TextView golsVisitante, TextView dataHora, TextView estadio) {
+=======
+    TextView categoria;
+
+    public ViewHolderResultado(ImageView escudoCasa, ImageView escudoVisitante, TextView timeCasa, TextView timeVisitante, TextView golsCasa, TextView golsVisitante, TextView dataHora, TextView categoria) {
+>>>>>>> repo-pamela/master
         this.escudoCasa = escudoCasa;
         this.escudoVisitante = escudoVisitante;
         this.timeCasa = timeCasa;
@@ -39,7 +50,11 @@ public class ViewHolderResultado {
         this.golsCasa = golsCasa;
         this.golsVisitante = golsVisitante;
         this.dataHora = dataHora;
+<<<<<<< HEAD
         this.estadio = estadio;
+=======
+        this.categoria = categoria;
+>>>>>>> repo-pamela/master
     }
 
     public ImageView getEscudoCasa() {
@@ -98,12 +113,21 @@ public class ViewHolderResultado {
         this.dataHora = dataHora;
     }
 
+<<<<<<< HEAD
     public TextView getEstadio() {
         return estadio;
     }
 
     public void setEstadio(TextView estadio) {
         this.estadio = estadio;
+=======
+    public TextView getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(TextView categoria) {
+        this.categoria = categoria;
+>>>>>>> repo-pamela/master
     }
 }
 

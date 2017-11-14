@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <resources>
     <string name="app_name">Futebol Dos Pais</string>
     <string name="item_jogos">Jogos</string>
@@ -14,3 +15,21 @@
     <string name="hello_blank_fragment">Fui Criado!!!</string>
 
 </resources>
+=======
+<resources>
+    <string name="app_name">Futebol Dos Pais</string>
+    <string name="item_jogos">Jogos</string>
+    <string name="item_tabela">Tabela</string>
+    <string name="item_artilharia">Artilharia</string>
+    <string name="item_cartoes">Cartões</string>
+    <string name="item_suspensos">Suspensos</string>
+
+    <string name="btn_master">Master</string>
+    <string name="btn_senior">Sênior</string>
+    <string name="btn_todos">Todos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Fui Criado!!!</string>
+
+</resources>
+>>>>>>> repo-pamela/master

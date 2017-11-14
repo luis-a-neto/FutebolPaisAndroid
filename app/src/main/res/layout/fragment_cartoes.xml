@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -72,3 +73,92 @@
     </RelativeLayout>
 
 </RelativeLayout>
+=======
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="br.com.futeboldospais.futeboldospais.controller.CartoesFragment">
+
+    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="-5dp"
+        android:background="@color/white"
+        android:focusable="false"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_voltar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="11dp"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/ic_voltar" />
+
+            <RadioGroup
+                android:id="@+id/toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/pink_out_line"
+                android:checkedButton="@+id/offer"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbt_amarelo"
+                    android:layout_width="62dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/arredondar_borda_esq_branco"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Amarelo"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/rbt_vermelho"
+                    android:layout_width="62dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/arredondar_borda_dir_branco"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Vermelho"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+>>>>>>> repo-pamela/master

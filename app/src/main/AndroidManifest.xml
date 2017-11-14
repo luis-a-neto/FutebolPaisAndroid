@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.futeboldospais.futeboldospais">
@@ -36,4 +37,46 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.futeboldospais.futeboldospais">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo_2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo_2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".controller.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".controller.DocumentViewer"
+            android:label="@string/title_activity_document_viewer"
+            android:theme="@style/AppTheme" />
+
+        <activity android:name=".controller.MenuPrincipalActivity"/>
+
+        <!-- Declaração de serviços da aplicação -->
+        <service
+            android:name=".ServicoAtualizacao"
+            android:exported="false" />
+
+    </application>
+
+    <!-- Declaração de permissões necessárias -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+>>>>>>> repo-pamela/master
 </manifest>
