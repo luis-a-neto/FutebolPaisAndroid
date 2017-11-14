@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -27,33 +26,3 @@
         android:icon="@drawable/ic_suspensos"
         android:title="@string/item_suspensos" />
 </menu>
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/item_jogos"
-        android:icon="@drawable/ic_jogos"
-        android:title="@string/item_jogos" />
-
-    <item
-        android:id="@+id/item_classificacao"
-        android:icon="@drawable/ic_classificacao"
-        android:title="@string/item_tabela" />
-
-    <item
-        android:id="@+id/item_artilharia"
-        android:icon="@drawable/ic_artilharia"
-        android:title="@string/item_artilharia" />
-
-    <item
-        android:id="@+id/item_cartoes"
-        android:icon="@drawable/ic_cartoes2"
-        android:title="@string/item_cartoes" />
-
-    <item
-        android:id="@+id/item_suspensos"
-        android:icon="@drawable/ic_suspensos"
-        android:title="@string/item_suspensos" />
-</menu>
->>>>>>> repo-pamela/master

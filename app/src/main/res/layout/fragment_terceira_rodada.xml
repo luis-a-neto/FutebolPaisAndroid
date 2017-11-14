@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,32 +14,3 @@
         android:layout_marginRight="10dp"/>
 
 </FrameLayout>
-=======
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="br.com.futeboldospais.futeboldospais.controller.TerceiraRodadaFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <ListView
-        android:id="@+id/terceira_rodada_tabela"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fastScrollEnabled="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:scrollbars="none"/>
-
-    <ListView
-        android:id="@+id/terceira_rodada_tabela_vazia"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fastScrollEnabled="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_below="@id/terceira_rodada_tabela"
-        android:scrollbars="none"/>
-
-</RelativeLayout>
->>>>>>> repo-pamela/master

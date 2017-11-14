@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#04930b</color>
@@ -20,30 +19,3 @@
 
     <color name="transparent">#00000000 </color>
 </resources>
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="colorPrimary">#04930b</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="colorPrimary2">#314697</color>
-    <color name="colorPrimary3">#3c9d02</color>
-    <color name="colorPrimary4">#da0e409e</color>
-    #314697
-
-    <color name="red">#ff0000</color>
-    <color name="greenDark">#00600f</color>
-    <color name="green">#388e3c</color>
-    <color name="greenLight">#6abf69</color>
-    <color name="blue">#0346ff</color>
-    <color name="lightBlue">#01d5ff</color>
-
-    <color name="white">#FFF</color>
-    <color name="black">#DD333333</color>
-    <color name="gray">#8b979f</color>
-	<color name="grayLight">#bbbbbb</color>
-    <color name="superGrayLight">#88EEEEEE</color>
-
-    <color name="transparent">#00000000 </color>
-</resources>
->>>>>>> repo-pamela/master

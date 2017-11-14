@@ -25,19 +25,11 @@
         android:layout_marginTop="?attr/actionBarSize"
         />
 
-<<<<<<< HEAD
     <!-- <android.widget.ImageView
-=======
-    <android.widget.ImageView
->>>>>>> repo-pamela/master
         android:id="@+id/jpgView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize"
-<<<<<<< HEAD
         /> -->
-=======
-        />
->>>>>>> repo-pamela/master
 
 </android.support.design.widget.CoordinatorLayout>

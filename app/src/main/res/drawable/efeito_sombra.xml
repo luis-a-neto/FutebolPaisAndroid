@@ -1,30 +1,18 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-<<<<<<< HEAD
             <solid android:color="#CADDDDDD"/>
-=======
-            <solid android:color="#59DDDDDD" />
->>>>>>> repo-pamela/master
             <corners android:radius="0dp" />
         </shape>
     </item>
 
     <item
-<<<<<<< HEAD
         android:left="1dp"
-=======
-        android:left="0dp"
->>>>>>> repo-pamela/master
         android:right="0dp"
         android:top="0dp"
         android:bottom="4dp">
         <shape android:shape="rectangle">
-<<<<<<< HEAD
             <solid android:color="@android:color/white"/>
-=======
-            <solid android:color="@color/white"/>
->>>>>>> repo-pamela/master
             <corners android:radius="0dp" />
         </shape>
     </item>
